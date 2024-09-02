@@ -5,7 +5,7 @@ import { useGetFilmsQuery, useGetFilmsTopQuery } from '../services/kinopoiskApi'
 
 export default function useMoviesQuery() {
   const { countries, order, year, page } = useSelector(
-    (state) => state.currentQuerySlice
+    (state) => state.currentQuery
   )
 
   const responsePopular = useGetFilmsTopQuery({
