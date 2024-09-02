@@ -18,9 +18,6 @@ export default function Search() {
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
-//   const eseSelector1 = useSelector((state) => state)
-//   console.log(eseSelector1)
-
     const { countries, genreId, order, type, year, page, keyword } = useSelector(
       (state) => state.currentQuery
     )

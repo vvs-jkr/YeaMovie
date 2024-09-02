@@ -9,15 +9,16 @@ import {
   useGetFilmsQuery,
   useGetGenresAndCountriesQuery,
 } from '../../../services/kinopoiskApi'
-import ErrorMessage from '../../ui/ErrorMessage/ErrorMessage' 
+import ErrorMessage from '../../ui/ErrorMessage/ErrorMessage'
 import MoviesList from '../../ui/MoviesList/MoviesList'
-import SelectMovies from '../../ui/SelectMovies/SelectMovies' 
+import SelectMovies from '../../ui/SelectMovies/SelectMovies'
 import MoviesListMainSkeleton from './MoviesListMainSkeleton'
 
 export default function MoviesListMain() {
   const location = useLocation()
+
   const { countries, order, year, genreId } = useSelector(
-    (state) => state.currentQuerySlice
+    (state) => state.currentQuery
   )
   const [page, setPage] = useState(1)
   const navigate = useNavigate()
